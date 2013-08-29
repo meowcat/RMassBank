@@ -24,7 +24,7 @@ biocViews: Bioinformatics, MassSpectrometry, Metabolomics, Software
 Depends:
     rcdk,yaml,mzR,methods
 Imports:
-    XML,RCurl
+    XML,RCurl,rjson
 Suggests:
     gplots,RMassBankData (>= 0.99.3),
     xcms (>= 1.37.1),
