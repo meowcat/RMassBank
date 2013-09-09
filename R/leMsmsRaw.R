@@ -318,8 +318,14 @@ findMsMsHRperxcms.direct <- function(fileName, cpdID, mode="pH", findPeaksArgs =
 	
 	for(i in 1:length(xrs)){
 		peaks(xsmsms[[i]]) <- do.call(findPeaks,c(findPeaksArgs, object = xrs[[i]]))
+
+                if (nrow(peaks(xsmsms[[i]])) == 0) {
+                  spectra[[i]] <- matrix(0,2,7)
+                  next 
+                }
+                
 		## Get pspec 
-		pl <- peaks(xsmsms[[i]])[,c("mz", "rt")]
+		pl <- peaks(xsmsms[[i]])[,c("mz", "rt"), drop=FALSE]
 
 		## Best: find precursor peak
 		candidates[[i]] <- which( pl[,"mz", drop=FALSE] < parentMass + mzabs & pl[,"mz", drop=FALSE] > parentMass - mzabs

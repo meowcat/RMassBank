@@ -1209,7 +1209,12 @@ makeRecalibration <- function(spec, mode,
 	
 	rcdata <- spec$peaksMatched[spec$peaksMatched$formulaCount==1,,drop=FALSE]
 	ms1data <- recalibrate.addMS1data(spec, mode, recalibrateMS1Window)
-	rcdata <- rbind(rcdata, ms1data)
+
+	if (recalibrateMS1 != "none") {
+          ## Add m/z values from MS1 to calibration datapoints
+          rcdata <- rbind(rcdata, ms1data)
+        }
+        
 	rcdata$dmz <- rcdata$mzFound - rcdata$mzCalc
 	ms1data$dmz <- ms1data$mzFound - ms1data$mzCalc
 	
