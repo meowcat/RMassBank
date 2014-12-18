@@ -13,9 +13,9 @@ loaded options and given parameters.}
   \item{w}{A \code{msmsWorkspace} to work with.}
 
   \item{filetable}{The path to a .csv-file that contains
-  the columns "files" and "cpdid" supplying the
-  relationships between files and compound IDs. Either this
-  or "files" need to be specified.}
+  the columns "Files" and "ID" supplying the relationships 
+  between files and compound IDs. Either this or the 
+  parameter "files" need to be specified.}
 
   \item{files}{A vector or list containing the filenames of
   the files that are to be read as spectra.  For the IDs to

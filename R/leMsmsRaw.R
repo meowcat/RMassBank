@@ -307,7 +307,7 @@ findMsMsHRperxcms.direct <- function(fileName, cpdID, mode="pH", findPeaksArgs =
 	if(MSe == FALSE){
 		## Fake MS1 from MSn scans
 		## xrmsmsAsMs <- msn2xcmsRaw(xrmsms)
-		suppressWarnings(xrs <- split(msn2xcmsRaw(xrmsms), f=xrmsms@msnCollisionEnergy))
+		suppressWarnings(xrs <- split(msn2xcmsRaw(xrmsms), f = xrmsms@msnCollisionEnergy))
 	} else{
 		xrs <- list()
 		xrs[[1]] <- xrmsms
@@ -320,7 +320,6 @@ findMsMsHRperxcms.direct <- function(fileName, cpdID, mode="pH", findPeaksArgs =
 	psp <- list()
 	spectra <- list()
 	whichmissing <- vector()
-	
 	metaspec <- list()
 	for(ID in 1:length(cpdID)){
 		spectra <- list()

@@ -282,8 +282,6 @@ First, create a workspace for the \Rvar{msmsWorkflow}:
 w <- newMsmsWorkspace()
 @
 
-
-
 The full paths of the files must be loaded into the container in the array
 \Rvar{files}:
 

@@ -52,6 +52,19 @@ loadInfolist <- function(mb, fileName)
   # Legacy check for loading the Uchem format files.
   # Even if dbname_* are not used downstream of here, it's still good to keep them
   # for debugging reasons.
+  n <- colnames(mbdata_new)
+  cols <- c("id","dbcas","dataused")
+  
+  # Check if comma-separated or semicolon-separated
+  d <- setdiff(cols, n)
+  if(length(d)>0){
+		mbdata_new <- read.csv2(fileName, stringsAsFactors=FALSE)
+		n <- colnames(mbdata_new)
+		d2 <- setdiff(cols, n)
+		if(length(d2) > 0){
+			stop("Some columns are missing in the infolist.")
+		}
+	}
   if("dbname_d" %in% colnames(mbdata_new))
   {
     colnames(mbdata_new)[[which(colnames(mbdata_new)=="dbname_d")]] <- "dbname"
@@ -385,7 +398,7 @@ gatherData <- function(id)
 		# Actually retrieve data from CTS (see the webaccess scripts)
 		infos <- getCtsRecord(inchikey_split)
 		
-		if(length(infos) == 0)
+		if(infos == "Sorry, we couldn't find any matching results")
 			dataUsed <- "dbname"
 		else
 			dataUsed <- "smiles"
@@ -1551,6 +1564,8 @@ addPeaks <- function(mb, filename_or_dataframe)
 	cols <- c("cpdID", "scan", "mzFound", "int", "OK")
 	
 	n <- colnames(df)
+	
+	# Check if comma-separated or semicolon-separated
 	d <- setdiff(cols, n)
 	
 	if(length(d)>0){
