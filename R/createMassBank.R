@@ -576,6 +576,7 @@ gatherData <- function(id)
 	mbdata[["COMMENT"]] <- list()
 	mbdata[["COMMENT"]][["CONFIDENCE"]] <- getOption("RMassBank")$annotations$confidence_comment
 	mbdata[["COMMENT"]][["ID"]] = id
+    
 	# here compound info starts
 	mbdata[['CH$NAME']] <- names
 	# Currently we use a fixed value for Compound Class, since there is no useful
@@ -758,6 +759,7 @@ gatherDataBabel <- function(id){
 			mbdata[["COMMENT"]] <- list()
 			mbdata[["COMMENT"]][["CONFIDENCE"]] <- getOption("RMassBank")$annotations$confidence_comment
 			mbdata[["COMMENT"]][["ID"]] <- id
+
 			# here compound info starts
 			mbdata[['CH$NAME']] <- as.list(dbname)
 			
@@ -1230,6 +1232,12 @@ gatherSpectrum <- function(spec, msmsdata, ac_ms, ac_lc, aggregated, additionalP
   # Add the MS$FOCUSED_ION info.
   mbdata[["MS$FOCUSED_ION"]] <- ms_fi
 
+  ## The SPLASH is a hash value calculated across all peaks
+  ## http://splash.fiehnlab.ucdavis.edu/
+  ## Has to be temporarily added as "PK$SPLASH" in the "lower" part
+  ## of the record, but will later be moved "up" when merging parts in compileRecord()  
+  mbdata[["MS$RELATED_MS"]] <- list(SPLASH = getSplash(peaks[,c("m/z", "int.")]))
+  
   # the data processing tag :)
   # Change by Tobias:
   # I suggest to add here the current version number of the clone due to better distinction between different makes of MB records
@@ -1247,6 +1255,7 @@ gatherSpectrum <- function(spec, msmsdata, ac_ms, ac_lc, aggregated, additionalP
   # Annotation:
   if(getOption("RMassBank")$add_annotation==TRUE)
     mbdata[["PK$ANNOTATION"]] <- annotation
+
   # Peak table
   mbdata[["PK$NUM_PEAK"]] <- peaknum
   mbdata[["PK$PEAK"]] <- peaks
@@ -1334,6 +1343,7 @@ compileRecord <- function(spec, mbdata, aggregated, additionalPeaks = NULL)
       # Note that the accession number and record title (in the upper part) must of course
       # be filled in with scan-specific info.
       mbrecord <- c(mbdata, l)
+
       # Here is the right place to fix the name of the INTERNAL ID field.
       names(mbrecord[["COMMENT"]])[[which(names(mbrecord[["COMMENT"]]) == "ID")]] <-
         getOption("RMassBank")$annotations$internal_id_fieldname
