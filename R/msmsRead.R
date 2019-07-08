@@ -425,7 +425,7 @@ msmsRead.RAW <- function(w, xRAW = NULL, cpdids = NULL, mode, findPeaksArgs = NU
 #' @seealso \code{\link{msmsWorkspace-class}},
 #'     \code{\link{msmsWorkflow}}
 #' @author Michael Stravs, Eawag <michael.stravs@@eawag.ch>
-#' @author Erik Mueller, UFZ
+#' @author Todor Kondić, LCSB-ECI <todor.kondic@@uni.lu>
 #' @export
 msmsRead.parallel <- function(w,proc,outfile="",filetable = NULL, files = NULL, cpdids = NULL, 
                               readMethod, mode, confirmMode = FALSE, useRtLimit = TRUE, 
