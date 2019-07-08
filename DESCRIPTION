@@ -28,8 +28,19 @@ Depends:
     Rcpp
 Encoding: UTF-8
 Imports:
-    XML,RCurl,rjson,S4Vectors,digest,
-    rcdk,yaml,mzR,methods,Biobase,MSnbase,httr
+    XML,
+    RCurl,
+    rjson,
+    S4Vectors,
+    digest,
+    rcdk,
+    yaml,
+    mzR,
+    methods,
+    Biobase,
+    MSnbase,
+    httr,
+    parallel
 Suggests:
     gplots,RMassBankData,
     xcms (>= 1.37.1),
