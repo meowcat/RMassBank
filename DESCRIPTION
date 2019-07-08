@@ -12,7 +12,8 @@ Authors@R: c(
     "sneumann@ipb-halle.de"), person(given = "Erik", family = "Muller", role =
     "aut", email = "erik.mueller@student.uni-halle.de"), person(given =
     "Tobias", family = "Schulze", role = "ctb", email =
-    "tobias.schulze@ufz.de") )
+    "tobias.schulze@ufz.de"), person(given = "Todor", family= "Kondić", role =
+    "ctb", email = "todor.kondic@uni.lu"))
 Author: Michael Stravs, Emma Schymanski, Steffen Neumann, Erik Mueller, with
     contributions from Tobias Schulze
 Maintainer: RMassBank at Eawag <massbank@eawag.ch>
