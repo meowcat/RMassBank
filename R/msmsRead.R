@@ -378,9 +378,8 @@ msmsRead.RAW <- function(w, xRAW = NULL, cpdids = NULL, mode, findPeaksArgs = NU
 #' See the vignette \code{vignette("RMassBank")} for further details about the
 #' workflow.
 #' 
+#' @param cl Cluster.
 #' @param w A \code{msmsWorkspace} to work with.
-#' @param proc Number of processes to be used to exec the function.
-#' @param outfile Filepath of the logging file. Defaults to stdout ("").
 #' @param filetable The path to a .csv-file that contains the columns
 #'     "Files" and "ID" supplying the relationships between files and
 #'     compound IDs. Either this or the parameter "files" need to be
@@ -427,7 +426,7 @@ msmsRead.RAW <- function(w, xRAW = NULL, cpdids = NULL, mode, findPeaksArgs = NU
 #' @author Michael Stravs, Eawag <michael.stravs@@eawag.ch>
 #' @author Todor Kondić, LCSB-ECI <todor.kondic@@uni.lu>
 #' @export
-msmsRead.parallel <- function(w,proc,outfile="",filetable = NULL, files = NULL, cpdids = NULL, 
+msmsRead.parallel <- function(cl,w,filetable = NULL, files = NULL, cpdids = NULL, 
                               readMethod, mode, confirmMode = FALSE, useRtLimit = TRUE, 
                               Args = NULL, settings = getOption("RMassBank"),
                               progressbar = "progressBarHook", MSe = FALSE, plots = FALSE){
@@ -490,10 +489,8 @@ msmsRead.parallel <- function(w,proc,outfile="",filetable = NULL, files = NULL, 
         analyzeMethod <- "intensity"
     }
         
-	
+
 	if(readMethod == "mzR"){
-            cl <- parallel::makeCluster(proc,outfile=outfile)
-            parallel::clusterEvalQ(library(RMassBank))
             count <- 1
             envir <- environment()
             ## clusterExport(cl,c("count","envir")) # Have no idea what
@@ -506,20 +503,19 @@ msmsRead.parallel <- function(w,proc,outfile="",filetable = NULL, files = NULL, 
                 envir$count <- envir$count + 1
 							
                 ## Retrieve spectrum data
-                spec <- findMsMsHR(fileName = fileName, 
+                spec <- findMsMsHR(fileName = fn, 
                                    cpdID = cpdID, mode = mode, confirmMode = confirmMode, useRtLimit = useRtLimit,
                                    ppmFine = settings$findMsMsRawSettings$ppmFine,
                                    mzCoarse = settings$findMsMsRawSettings$mzCoarse,
                                    fillPrecursorScan = settings$findMsMsRawSettings$fillPrecursorScan,
                                    rtMargin = settings$rtMargin,
                                    deprofile = settings$deprofile, retrieval=retrieval)
-                message("File:",fn,"Compound:",cpdID,"DONE")
+                message("File: ",fn,"Compound: ",cpdID,"DONE")
                 gc()
                 return(spec)
             
             }
             cllct <- parallel::parLapply(cl,w@files,doone)
-            parallel::stopCluster(cl)
             w@spectra <- as(cllct,"SimpleList")
             names(w@spectra) <- basename(as.character(w@files))
             return(w)
