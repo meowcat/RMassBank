@@ -773,17 +773,21 @@ gatherData <- function(id)
 			link[["LIPIDMAPS"]] <- CTS.externalIdSubset(CTSinfo,"LipidMAPS")[[1]]
 	}
 	# PubChem CID
-	if(is.na(PcInfo$PcID[1])){
-		if(!is.na(CTSinfo[1])){
-			if("PubChem CID" %in% CTS.externalIdTypes(CTSinfo))
-			{
-				pc <- CTS.externalIdSubset(CTSinfo,"PubChem CID")
-				link[["PUBCHEM"]] <- paste0(min(pc))
-			}
-		}
-	} else{
-		link[["PUBCHEM"]] <- PcInfo$PcID[1]
+	if(!is.na(PcInfo$PcID[1])){
+	  link[["PUBCHEM"]] <- PcInfo$PcID[1]
 	}
+	# older CTS-based code; retained for records
+	# if(is.na(PcInfo$PcID[1])){
+	# 	if(!is.na(CTSinfo[1])){
+	# 		if("PubChem CID" %in% CTS.externalIdTypes(CTSinfo))
+	# 		{
+	# 			pc <- CTS.externalIdSubset(CTSinfo,"PubChem CID")
+	# 			link[["PUBCHEM"]] <- paste0(min(pc))
+	# 		}
+	# 	}
+	# } else{
+	# 	link[["PUBCHEM"]] <- PcInfo$PcID[1]
+	# }
 	
 	
 	if(!is.null(link[["PUBCHEM"]])){

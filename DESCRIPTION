@@ -7,7 +7,7 @@ Authors@R: c(
     role=c("cre")),
     person(given = "Michael A.", family = "Stravs", email =
     "michael.stravs@eawag.ch", role=c("aut")), person(given = "Emma L.",
-    family = "Schymanski", email = "emma.schymanski@eawag.ch", role=c("aut")),
+    family = "Schymanski", email = "emma.schymanski@uni.lu", role=c("aut")),
     person(given = "Steffen", family = "Neumann", role = "aut", email =
     "sneumann@ipb-halle.de"), person(given = "Erik", family = "Muller", role =
     "aut", email = "erik.mueller@student.uni-halle.de"), person(given =
