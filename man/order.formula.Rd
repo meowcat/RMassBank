@@ -27,11 +27,10 @@ order.formula("H4C9")
 order.formula("C2N5HClBr")
 
 }
-\author{
-Michele Stravs
-}
 \seealso{
 \code{\link{list.to.formula}}, \code{\link{add.formula}},
 \code{\link{is.valid.formula}}
 }
-
+\author{
+Michele Stravs
+}

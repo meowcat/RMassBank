@@ -32,11 +32,10 @@ types <- unique(unlist(lapply(data$synonyms, function(i) i$type)))
 \dontrun{print(types)}
 
 }
+\references{
+Chemical Translation Service:
+\url{https://cts.fiehnlab.ucdavis.edu}
+}
 \author{
 Michele Stravs, Eawag <stravsmi@eawag.ch>
 }
-\references{
-Chemical Translation Service:
-\url{http://cts.fiehnlab.ucdavis.edu}
-}
-

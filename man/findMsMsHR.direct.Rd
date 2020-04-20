@@ -4,13 +4,19 @@
 \alias{findMsMsHR.direct}
 \title{Discontinued: find MS/MS spectrum from open raw file}
 \usage{
-findMsMsHR.direct(msRaw, cpdID, mode = "pH", confirmMode = 0,
+findMsMsHR.direct(
+  msRaw,
+  cpdID,
+  mode = "pH",
+  confirmMode = 0,
   useRtLimit = TRUE,
   ppmFine = getOption("RMassBank")$findMsMsRawSettings$ppmFine,
   mzCoarse = getOption("RMassBank")$findMsMsRawSettings$mzCoarse,
   fillPrecursorScan = getOption("RMassBank")$findMsMsRawSettings$fillPrecursorScan,
   rtMargin = getOption("RMassBank")$rtMargin,
-  deprofile = getOption("RMassBank")$deprofile, headerCache = NULL)
+  deprofile = getOption("RMassBank")$deprofile,
+  headerCache = NULL
+)
 }
 \arguments{
 \item{msRaw}{x}
@@ -45,4 +51,3 @@ parameters).
 \author{
 stravsmi
 }
-

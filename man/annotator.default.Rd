@@ -4,7 +4,7 @@
 \alias{annotator.default}
 \title{Generate peak annotation from peaklist}
 \usage{
-annotator.default(annotation, type)
+annotator.default(annotation, formulaTag)
 }
 \arguments{
 \item{annotation}{A peak list to be annotated. Contains columns:
@@ -31,4 +31,3 @@ annotation <- annotator.default(annotation)
 \author{
 Michele Stravs, Eawag <stravsmi@eawag.ch>
 }
-

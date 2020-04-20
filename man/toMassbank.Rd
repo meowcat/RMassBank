@@ -24,12 +24,12 @@ entries can be as follows: \itemize{
 
 \code{'CH\$EXACT_MASS' = '329.1023'}
 
-is written as
+ is written as
 
-\code{CH\$EXACT_MASS: 329.1023} 
+ \code{CH\$EXACT_MASS: 329.1023} 
 \item A character array:
 
-\code{'CH\$NAME' = c('2-Aminobenzimidazole', '1H-Benzimidazol-2-amine')}
+ \code{'CH\$NAME' = c('2-Aminobenzimidazole', '1H-Benzimidazol-2-amine')} 
 
 is written as
 
@@ -37,15 +37,15 @@ is written as
 
 \code{CH\$NAME: 1H-Benzimidazol-2-amine}
 
-\item A named list of strings:
+\item A named list of strings: 
 
-\code{'CH\$LINK' = list('CHEBI' = "27822", "KEGG" = "C10901")}
+	\code{'CH\$LINK' = list('CHEBI' = "27822", "KEGG" = "C10901")} 
 
-is written as
+is written as 
 
 \code{CH\$LINK: CHEBI 27822}
 
-\code{CH\$LINK: KEGG C10901}
+\code{CH\$LINK: KEGG C10901} 
 
 \item A data frame (e.g. the peak table) is written as specified in
 the MassBank record format (Section 2.6.3): the column names are used as
@@ -69,9 +69,7 @@ mbdata <- gatherData(id)
 mbtext <- toMassbank(mbdata)
 }
 
-}
-\author{
-Michael Stravs
+
 }
 \references{
 MassBank record format:
@@ -80,4 +78,6 @@ MassBank record format:
 \seealso{
 \code{\link{compileRecord}}, \code{\link{mbWorkflow}}
 }
-
+\author{
+Michael Stravs
+}

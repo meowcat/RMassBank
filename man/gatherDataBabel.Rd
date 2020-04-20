@@ -38,9 +38,6 @@ on one or more of the compounds in the compound list are sparse
 \dontrun{gatherDataBabel(131)}
 
 }
-\author{
-Michael Stravs, Erik Mueller
-}
 \references{
 MassBank record format:
 \url{http://www.massbank.jp/manuals/MassBankRecord_en.pdf}
@@ -48,4 +45,6 @@ MassBank record format:
 \seealso{
 \code{\link{mbWorkflow}}
 }
-
+\author{
+Michael Stravs, Erik Mueller
+}

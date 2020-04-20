@@ -38,10 +38,9 @@ resetList() clears a currently loaded list.
 \dontrun{loadList("mylist.csv")}
 
 }
-\author{
-Michael Stravs
-}
 \seealso{
 \code{\link{findMz}}
 }
-
+\author{
+Michael Stravs
+}

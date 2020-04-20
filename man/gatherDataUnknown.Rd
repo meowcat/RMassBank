@@ -43,9 +43,6 @@ i.e. not enough information is present to derive anything about formulas or link
 \dontrun{gatherDataUnknown(131,"pH")}
 
 }
-\author{
-Michael Stravs, Erik Mueller
-}
 \references{
 MassBank record format:
 \url{http://www.massbank.jp/manuals/MassBankRecord_en.pdf}
@@ -53,4 +50,6 @@ MassBank record format:
 \seealso{
 \code{\link{mbWorkflow}}
 }
-
+\author{
+Michael Stravs, Erik Mueller
+}

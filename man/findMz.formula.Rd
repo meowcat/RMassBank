@@ -25,10 +25,9 @@ Find the exact mass +/- a given margin for a given formula or its ions and adduc
 \examples{
 findMz.formula("C6H6")
 }
-\author{
-Michael A. Stravs, Eawag <michael.stravs@eawag.ch>
-}
 \seealso{
 \code{\link{findMz}}
 }
-
+\author{
+Michael A. Stravs, Eawag <michael.stravs@eawag.ch>
+}

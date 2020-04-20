@@ -27,10 +27,9 @@ All peaks with OK=1 will be included in the spectra.
 	\dontrun{addPeaks("myrun_additionalPeaks.csv")}
 
 }
-\author{
-Michael Stravs
-}
 \seealso{
 \code{\link{mbWorkflow}}
 }
-
+\author{
+Michael Stravs
+}

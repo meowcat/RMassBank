@@ -2,8 +2,8 @@
 % Please edit documentation in R/settings_example.R
 \name{RmbDefaultSettings}
 \alias{RmbDefaultSettings}
-\alias{RmbSettingsTemplate}
 \alias{loadRmbSettings}
+\alias{RmbSettingsTemplate}
 \alias{loadRmbSettingsFromEnv}
 \title{RMassBank settings}
 \usage{
@@ -34,7 +34,7 @@ settings as you like. Before using RMassBank, you must then load the
 settings file using \code{loadRmbSettings}. \code{RmbDefaultSettings} loads
 the default settings. \code{loadRmbSettingsFromEnv} loads the settings 
 stored in env$RmbSettings, which is useful when reloading archives with
-saved settings inside.
+saved settings inside.  
 
 Note: no settings are loaded upon loading MassBank!
 This is intended, so that one never forgets to load the correct settings.
@@ -53,10 +53,9 @@ chance, installed OpenBabel into the same directory as I have!}
  unlink("mysettings.ini")
 
 }
-\author{
-Michael Stravs
-}
 \seealso{
 \code{\link{RmbSettings}}
 }
-
+\author{
+Michael Stravs
+}

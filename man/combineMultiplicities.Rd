@@ -25,7 +25,7 @@ conjunction with the \code{confirmMode} option of \code{\link{msmsWorkflow}}:
 a file can be analyzed with \code{confirmMode = 0} (default) and subsequently
 with \code{confirmMode = 1} (take second highest scan). The second analysis
 should contain "the same" spectra as the first one (but less intense) and can
-be used to confirm the peaks in the first spectra.
+be used to confirm the peaks in the first spectra.  
 
 TO DO: Enable the combination of workspaces for combining e.g. multiple
 energy settings measured separately.
@@ -42,10 +42,9 @@ energy settings measured separately.
 }
 
 }
-\author{
-Stravs MA, Eawag <michael.stravs@eawag.ch>
-}
 \seealso{
 \code{\link{msmsWorkspace-class}}
 }
-
+\author{
+Stravs MA, Eawag <michael.stravs@eawag.ch>
+}

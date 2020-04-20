@@ -47,9 +47,6 @@ working directly on the records.)
 }
 
 }
-\author{
-Michael Stravs
-}
 \references{
 MassBank record format:
 \url{http://www.massbank.jp/manuals/MassBankRecord_en.pdf}
@@ -57,4 +54,6 @@ MassBank record format:
 \seealso{
 \code{\link{gatherData}},\code{\link{loadInfolist}}
 }
-
+\author{
+Michael Stravs
+}

@@ -31,10 +31,9 @@ to.limits.rcdk("C6H6")
 to.limits.rcdk(add.formula("C6H12O6", "H"))
 
 }
-\author{
-Michael Stravs
-}
 \seealso{
 \code{\link{generate.formula}}, \code{\link{add.formula}}
 }
-
+\author{
+Michael Stravs
+}

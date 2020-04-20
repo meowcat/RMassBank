@@ -39,11 +39,10 @@ add.formula("C6H12O6", "C-3H-3")
 add.formula("C6H12O6", multiply.formula("C3H3", -1))
 
 }
-\author{
-Michael Stravs
-}
 \seealso{
 \code{\link{formulastring.to.list}}, \code{\link{is.valid.formula}},
 \code{\link{order.formula}}
 }
-
+\author{
+Michael Stravs
+}

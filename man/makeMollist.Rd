@@ -31,4 +31,3 @@ the compound ID (e.g. 2334.mol for ID 2334).
 \author{
 Michael A. Stravs, Eawag <michael.stravs@eawag.ch>
 }
-

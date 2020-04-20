@@ -39,9 +39,6 @@ getCactus("C1=CC=CC=C1", "stdinchikey")
 getCactus("C1=CC=CC=C1", "chemspider_id")
 
 }
-\author{
-Michael Stravs
-}
 \references{
 cactus Chemical Identifier Resolver:
 \url{http://cactus.nci.nih.gov/chemical/structure}
@@ -49,4 +46,6 @@ cactus Chemical Identifier Resolver:
 \seealso{
 \code{\link{getCtsRecord}}, \code{\link{getPcId}}
 }
-
+\author{
+Michael Stravs
+}

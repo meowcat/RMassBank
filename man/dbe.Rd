@@ -27,4 +27,3 @@ should never be below 0.
 \author{
 Michael Stravs
 }
-
