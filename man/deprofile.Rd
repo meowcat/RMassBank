@@ -2,9 +2,9 @@
 % Please edit documentation in R/deprofile.R
 \name{deprofile}
 \alias{deprofile}
+\alias{deprofile.scan}
 \alias{deprofile.fwhm}
 \alias{deprofile.localMax}
-\alias{deprofile.scan}
 \alias{deprofile.spline}
 \title{De-profile a high-resolution MS scan in profile mode.}
 \usage{
@@ -97,10 +97,9 @@ close(mzrFile)
 }
 
 }
-\author{
-Michael Stravs, Eawag <michael.stravs@eawag.ch>
-}
 \references{
 mzMine source code \href{http://sourceforge.net/svn/?group_id=139835}{http://sourceforge.net/svn/?group_id=139835}
 }
-
+\author{
+Michael Stravs, Eawag <michael.stravs@eawag.ch>
+}

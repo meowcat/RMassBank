@@ -27,10 +27,9 @@ Converts a pseudospectrum extracted from XCMS using CAMERA into the msmsWorkspac
      wspecs <- toRMB(XCMSpspectra)
 }
 }
-\author{
-Erik Mueller
-}
 \seealso{
 \code{\link{msmsWorkspace-class}}
 }
-
+\author{
+Erik Mueller
+}

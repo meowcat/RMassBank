@@ -4,10 +4,17 @@
 \alias{checkIsotopes}
 \title{Checks for isotopes in a \code{msmsWorkspace}}
 \usage{
-checkIsotopes(w, mode = "pH", intensity_cutoff = 0,
-  intensity_precision = "none", conflict = "strict", isolationWindow = 2,
-  evalMode = "complete", plotSpectrum = TRUE,
-  settings = getOption("RMassBank"))
+checkIsotopes(
+  w,
+  mode = "pH",
+  intensity_cutoff = 0,
+  intensity_precision = "none",
+  conflict = "strict",
+  isolationWindow = 2,
+  evalMode = "complete",
+  plotSpectrum = TRUE,
+  settings = getOption("RMassBank")
+)
 }
 \arguments{
 \item{w}{A \code{msmsWorkspace} to work with.}
@@ -51,4 +58,3 @@ Michael Stravs, Eawag <michael.stravs@eawag.ch>
 
 Erik Mueller, UFZ
 }
-

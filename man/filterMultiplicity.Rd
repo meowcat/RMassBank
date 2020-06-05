@@ -59,10 +59,9 @@ for further processing with \code{\link{mbWorkflow}}.
 			w, "myarchive", "pH")
 }
 }
-\author{
-Michael Stravs
-}
 \seealso{
 \code{\link{filterPeaksMultiplicity}},\code{\link{problematicPeaks}}
 }
-
+\author{
+Michael Stravs
+}

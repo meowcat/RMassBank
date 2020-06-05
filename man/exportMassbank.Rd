@@ -10,11 +10,11 @@ exportMassbank(compiled, files, molfile)
 \item{compiled}{Is ONE "compiled" entry, i.e. ONE compound with e.g. 14
 spectra, as returned from \code{\link{compileRecord}}.}
 
+\item{molfile}{A molfile from \code{\link{createMolfile}}}
+
 \item{files}{A n-membered array (usually a return value from
 \code{lapply(\link{toMassbank})}), i.e. contains n plain-text arrays with
 MassBank records.}
-
-\item{molfile}{A molfile from \code{\link{createMolfile}}}
 }
 \value{
 No return value.
@@ -44,9 +44,6 @@ wouldn't be needed here anymore. (The compound ID would have to go into
 }
 
 }
-\author{
-Michael Stravs
-}
 \references{
 MassBank record format:
 \url{http://www.massbank.jp/manuals/MassBankRecord_en.pdf}
@@ -55,4 +52,6 @@ MassBank record format:
 \code{\link{createMolfile}}, \code{\link{compileRecord}},
 \code{\link{toMassbank}}, \code{\link{mbWorkflow}}
 }
-
+\author{
+Michael Stravs
+}

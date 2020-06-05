@@ -2,10 +2,10 @@
 % Please edit documentation in R/leMsMs.r
 \name{recalibrate}
 \alias{recalibrate}
-\alias{recalibrate.identity}
-\alias{recalibrate.linear}
 \alias{recalibrate.loess}
+\alias{recalibrate.identity}
 \alias{recalibrate.mean}
+\alias{recalibrate.linear}
 \title{Predefined recalibration functions.}
 \usage{
 recalibrate.loess(rcdata)
@@ -77,4 +77,3 @@ recalibrate.MyOwnLoess <- function(rcdata)
 \author{
 Michael Stravs, EAWAG <michael.stravs@eawag.ch>
 }
-

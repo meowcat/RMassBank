@@ -4,16 +4,16 @@
 \alias{processProblematicPeaks}
 \title{Generate list of problematic peaks}
 \usage{
-processProblematicPeaks(w, mode, archivename = NA)
+processProblematicPeaks(w, archivename = NA)
 }
 \arguments{
 \item{w}{\code{msmsWorkspace} to analyze.}
 
-\item{mode}{Processing mode (pH etc)}
-
 \item{archivename}{Base name of the archive to write to (for "abc" the exported failpeaks list will be "abc_Failpeaks.csv").
 if the compoundlist is complete, "tentative", if at least a formula is present or "unknown"
 if the only know thing is the m/z}
+
+\item{mode}{Processing mode (pH etc)}
 }
 \value{
 Returns the aggregate data.frame with added column "\code{problematic}" (logical) which marks peaks which match the problematic criteria
@@ -24,4 +24,3 @@ Generates a list of intense unmatched peaks for further review (the "failpeak li
 \author{
 stravsmi
 }
-

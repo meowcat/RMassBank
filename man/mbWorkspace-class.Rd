@@ -38,10 +38,9 @@ Methods:
 		\item{show}{Shows a brief summary of the object. Currently only a stub.}
 }
 }
-\author{
-Michael Stravs, Eawag <michael.stravs@eawag.ch>
-}
 \seealso{
 \code{\link{mbWorkflow}}
 }
-
+\author{
+Michael Stravs, Eawag <michael.stravs@eawag.ch>
+}

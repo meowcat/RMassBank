@@ -5,11 +5,23 @@
 \alias{findMsMsHRperxcms.direct}
 \title{Read in mz-files using XCMS}
 \usage{
-findMsMsHRperxcms(fileName, cpdID, mode = "pH", findPeaksArgs = NULL,
-  plots = FALSE, MSe = FALSE)
+findMsMsHRperxcms(
+  fileName,
+  cpdID,
+  mode = "pH",
+  findPeaksArgs = NULL,
+  plots = FALSE,
+  MSe = FALSE
+)
 
-findMsMsHRperxcms.direct(fileName, cpdID, mode = "pH", findPeaksArgs = NULL,
-  plots = FALSE, MSe = FALSE)
+findMsMsHRperxcms.direct(
+  fileName,
+  cpdID,
+  mode = "pH",
+  findPeaksArgs = NULL,
+  plots = FALSE,
+  MSe = FALSE
+)
 }
 \arguments{
 \item{fileName}{The path to the mz-file that should be read}
@@ -34,6 +46,7 @@ Picks peaks from mz-files and returns the pseudospectra that CAMERA creates with
 \itemize{
 \item \code{findMsMsHRperxcms.direct}: A submethod of findMsMsHrperxcms that retrieves basic spectrum data
 }}
+
 \examples{
 \dontrun{
 		fileList <- list.files(system.file("XCMSinput", package = "RMassBank"), "Glucolesquerellin", full.names=TRUE)[3]
@@ -41,10 +54,9 @@ Picks peaks from mz-files and returns the pseudospectra that CAMERA creates with
      psp <- findMsMsHRperxcms(fileList,2184)
 }
 }
-\author{
-Erik Mueller
-}
 \seealso{
 \code{\link{msmsWorkflow}} \code{\link{toRMB}}
 }
-
+\author{
+Erik Mueller
+}

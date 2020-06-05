@@ -20,10 +20,9 @@ Can parse MassBank-records(only V2)
 		parseMassBank("filepath_to_records/RC00001.txt")
 }
 }
-\author{
-Erik Mueller
-}
 \seealso{
 \code{\link{validate}}
 }
-
+\author{
+Erik Mueller
+}

@@ -21,4 +21,3 @@ Generates a peak cache table for use with \code{\link{findMsMsHR}} functions.
 \author{
 stravsmi
 }
-

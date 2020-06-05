@@ -30,10 +30,9 @@ getMolecule("C1(C(C(C(C(C1Cl)Cl)Cl)Cl)Cl)Cl")
 getMolecule("C1=CC=CC=C1")
 
 }
-\author{
-Michael Stravs
-}
 \seealso{
 \code{\link{parse.smiles}}
 }
-
+\author{
+Michael Stravs
+}

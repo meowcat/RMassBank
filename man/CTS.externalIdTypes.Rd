@@ -30,4 +30,3 @@ databases <- CTS.externalIdTypes(data)
 \author{
 Michele Stravs, Eawag <stravsmi@eawag.ch>
 }
-

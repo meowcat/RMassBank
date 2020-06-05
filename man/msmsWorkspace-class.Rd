@@ -2,8 +2,8 @@
 % Please edit documentation in R/RmbWorkspace.R
 \docType{class}
 \name{msmsWorkspace-class}
-\alias{.msmsWorkspace}
 \alias{msmsWorkspace-class}
+\alias{.msmsWorkspace}
 \alias{show,msmsWorkspace-method}
 \title{Workspace for \code{msmsWorkflow} data}
 \usage{
@@ -18,7 +18,7 @@ A workspace which stores input and output data for \code{\link{msmsWorkflow}}.
 \details{
 Slots:
 
-\describe{
+ \describe{
 	\item{files}{The input file names}
 	\item{spectra}{The spectra per compound (\code{RmbSpectraSet}) extracted from the raw files}
  \item{aggregated}{A data.frame with an aggregated peak table from all \code{spectra}.
@@ -34,10 +34,9 @@ Methods: \describe{
 	\item{show}{Shows a brief summary of the object and processing progress.}
 	}
 }
-\author{
-Michael Stravs, Eawag <michael.stravs@eawag.ch>
-}
 \seealso{
 \code{\link{msmsWorkflow}}
 }
-
+\author{
+Michael Stravs, Eawag <michael.stravs@eawag.ch>
+}

@@ -6,17 +6,31 @@
 \alias{analyzeMsMs.intensity}
 \title{Analyze MSMS spectra}
 \usage{
-analyzeMsMs(msmsPeaks, mode = "pH", detail = FALSE, run = "preliminary",
+analyzeMsMs(
+  msmsPeaks,
+  mode = "pH",
+  detail = FALSE,
+  run = "preliminary",
   filterSettings = getOption("RMassBank")$filterSettings,
-  spectraList = getOption("RMassBank")$spectraList, method = "formula")
+  spectraList = getOption("RMassBank")$spectraList,
+  method = "formula"
+)
 
-analyzeMsMs.formula(msmsPeaks, mode = "pH", detail = FALSE,
+analyzeMsMs.formula(
+  msmsPeaks,
+  mode = "pH",
+  detail = FALSE,
   run = "preliminary",
-  filterSettings = getOption("RMassBank")$filterSettings)
+  filterSettings = getOption("RMassBank")$filterSettings
+)
 
-analyzeMsMs.intensity(msmsPeaks, mode = "pH", detail = FALSE,
+analyzeMsMs.intensity(
+  msmsPeaks,
+  mode = "pH",
+  detail = FALSE,
   run = "preliminary",
-  filterSettings = getOption("RMassBank")$filterSettings)
+  filterSettings = getOption("RMassBank")$filterSettings
+)
 }
 \arguments{
 \item{msmsPeaks}{A \code{RmbSpectraSet} object.
@@ -116,16 +130,16 @@ rule (refer to the documentation of \code{\link{filterPeakSatellites}} for detai
 
 \item \code{analyzeMsMs.intensity}: Analyze the peaks going only by intensity values
 }}
+
 \examples{
 
 	\dontrun{analyzed <- analyzeMsMs(spec, "pH", TRUE)}
 
 }
-\author{
-Michael Stravs
-}
 \seealso{
 \code{\link{msmsWorkflow}}, \code{\link{filterLowaccResults}},
 \code{\link{filterPeakSatellites}}, \code{\link{reanalyzeFailpeaks}}
 }
-
+\author{
+Michael Stravs
+}

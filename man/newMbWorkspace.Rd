@@ -19,10 +19,9 @@ Creates a new workspace for use with \code{\link{mbWorkflow}}.
 The workspace input data will be  loaded from the \code{\link{msmsWorkspace-class}}
 object provided by the parameter \code{w}.
 }
-\author{
-Michael Stravs, Eawag <michael.stravs@eawag.ch>
-}
 \seealso{
 \code{\link{mbWorkflow}}, \code{\link{msmsWorkspace-class}}
 }
-
+\author{
+Michael Stravs, Eawag <michael.stravs@eawag.ch>
+}

@@ -4,9 +4,16 @@
 \alias{msmsRead.RAW}
 \title{Extracts and processes spectra from a list of xcms-Objects}
 \usage{
-msmsRead.RAW(w, xRAW = NULL, cpdids = NULL, mode, findPeaksArgs = NULL,
-  settings = getOption("RMassBank"), progressbar = "progressBarHook",
-  plots = FALSE)
+msmsRead.RAW(
+  w,
+  xRAW = NULL,
+  cpdids = NULL,
+  mode,
+  findPeaksArgs = NULL,
+  settings = getOption("RMassBank"),
+  progressbar = "progressBarHook",
+  plots = FALSE
+)
 }
 \arguments{
 \item{w}{A \code{msmsWorkspace} to work with.}
@@ -41,12 +48,11 @@ in the global enviroment.
 See the vignette \code{vignette("RMassBank")} for further details about the
 workflow.
 }
+\seealso{
+\code{\link{msmsWorkspace-class}}, \code{\link{msmsWorkflow}}
+}
 \author{
 Michael Stravs, Eawag <michael.stravs@eawag.ch>
 
 Erik Mueller, UFZ
 }
-\seealso{
-\code{\link{msmsWorkspace-class}}, \code{\link{msmsWorkflow}}
-}
-

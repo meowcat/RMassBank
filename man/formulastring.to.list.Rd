@@ -39,11 +39,10 @@ molecular formulas ("CH4O", but not "CH3OH") work correctly.
 	formulastring.to.list(list.to.formula(formulastring.to.list("CHIBr")))
 
 }
-\author{
-Michael Stravs
-}
 \seealso{
 \code{\link{add.formula}}, \code{\link{order.formula}},
 \code{\link{is.valid.formula}}
 }
-
+\author{
+Michael Stravs
+}

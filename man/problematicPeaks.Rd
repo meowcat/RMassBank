@@ -33,10 +33,9 @@ fp <- problematicPeaks(specs[!specs$filterOK & !specs$noise &
 				,,drop=FALSE], peaksMatched(w), mode)
 }
 }
-\author{
-Michael Stravs
-}
 \seealso{
 \code{\link{msmsWorkflow}}
 }
-
+\author{
+Michael Stravs
+}

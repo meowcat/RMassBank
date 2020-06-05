@@ -4,11 +4,23 @@
 \alias{msmsWorkflow}
 \title{RMassBank mass spectrometry pipeline}
 \usage{
-msmsWorkflow(w, mode = "pH", steps = c(1:8), confirmMode = FALSE,
-  newRecalibration = TRUE, useRtLimit = TRUE, archivename = NA,
-  readMethod = "mzR", findPeaksArgs = NULL, plots = FALSE,
-  precursorscan.cf = FALSE, settings = getOption("RMassBank"),
-  analyzeMethod = "formula", progressbar = "progressBarHook", MSe = FALSE)
+msmsWorkflow(
+  w,
+  mode = "pH",
+  steps = c(1:8),
+  confirmMode = FALSE,
+  newRecalibration = TRUE,
+  useRtLimit = TRUE,
+  archivename = NA,
+  readMethod = "mzR",
+  findPeaksArgs = NULL,
+  plots = FALSE,
+  precursorscan.cf = FALSE,
+  settings = getOption("RMassBank"),
+  analyzeMethod = "formula",
+  progressbar = "progressBarHook",
+  MSe = FALSE
+)
 }
 \arguments{
 \item{w}{A \code{msmsWorkspace} to work with.}
@@ -68,10 +80,9 @@ in the global enviroment.
 See the vignette \code{vignette("RMassBank")} for further details about the
 workflow.
 }
-\author{
-Michael Stravs, Eawag <michael.stravs@eawag.ch>
-}
 \seealso{
 \code{\link{msmsWorkspace-class}}
 }
-
+\author{
+Michael Stravs, Eawag <michael.stravs@eawag.ch>
+}

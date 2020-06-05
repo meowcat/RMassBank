@@ -36,9 +36,6 @@ inserted empty and will be filled later on.
 \dontrun{gatherData(131)}
 
 }
-\author{
-Michael Stravs
-}
 \references{
 Chemical Translation Service:
 \url{http://uranus.fiehnlab.ucdavis.edu:8080/cts/homePage} 
@@ -54,4 +51,6 @@ Chemspider InChI conversion:
 \seealso{
 \code{\link{mbWorkflow}}
 }
-
+\author{
+Michael Stravs
+}

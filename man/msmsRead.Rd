@@ -5,10 +5,21 @@
 \title{Extracts and processes spectra from a specified file list, according to 
 loaded options and given parameters.}
 \usage{
-msmsRead(w, filetable = NULL, files = NULL, cpdids = NULL, readMethod,
-  mode, confirmMode = FALSE, useRtLimit = TRUE, Args = NULL,
-  settings = getOption("RMassBank"), progressbar = "progressBarHook",
-  MSe = FALSE, plots = FALSE)
+msmsRead(
+  w,
+  filetable = NULL,
+  files = NULL,
+  cpdids = NULL,
+  readMethod,
+  mode,
+  confirmMode = FALSE,
+  useRtLimit = TRUE,
+  Args = NULL,
+  settings = getOption("RMassBank"),
+  progressbar = "progressBarHook",
+  MSe = FALSE,
+  plots = FALSE
+)
 }
 \arguments{
 \item{w}{A \code{msmsWorkspace} to work with.}
@@ -61,12 +72,11 @@ in the global enviroment.
 See the vignette \code{vignette("RMassBank")} for further details about the
 workflow.
 }
+\seealso{
+\code{\link{msmsWorkspace-class}}, \code{\link{msmsWorkflow}}
+}
 \author{
 Michael Stravs, Eawag <michael.stravs@eawag.ch>
 
 Erik Mueller, UFZ
 }
-\seealso{
-\code{\link{msmsWorkspace-class}}, \code{\link{msmsWorkflow}}
-}
-

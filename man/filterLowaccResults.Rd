@@ -40,10 +40,9 @@ mass range. This should be applied after recalibration.
 
 
 }
-\author{
-Michael Stravs
-}
 \seealso{
 \code{\link{analyzeMsMs}}, \code{\link{filterPeakSatellites}}
 }
-
+\author{
+Michael Stravs
+}
