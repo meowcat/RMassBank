@@ -26,9 +26,10 @@ Adds the peaklist of a MassBank-Record to the specs of an msmsWorkspace
 		addMB("filepath_to_records/RC00001.txt")
 }
 }
-\seealso{
-\code{\link{addPeaksManually}}
-}
 \author{
 Erik Mueller
 }
+\seealso{
+\code{\link{addPeaksManually}}
+}
+

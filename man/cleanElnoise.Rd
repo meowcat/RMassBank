@@ -30,9 +30,10 @@ Removes known electronic noise peaks from a peak table
 		cleanElnoise(w@aggregated)	
 }
 }
-\seealso{
-\code{\link{msmsWorkflow}}
-}
 \author{
 Michael Stravs
 }
+\seealso{
+\code{\link{msmsWorkflow}}
+}
+

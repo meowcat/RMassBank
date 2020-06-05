@@ -30,6 +30,9 @@ the IUPAC name (using the preferred if available) and a Chebi link
 \dontrun{gatherPubChem("QEIXBXXKTUNWDK-UHFFFAOYSA-N")}
 
 }
+\author{
+Erik Mueller
+}
 \references{
 Pubchem REST:
 \url{https://pubchem.ncbi.nlm.nih.gov/pug_rest/PUG_REST.html}
@@ -39,6 +42,4 @@ Chebi:
 \seealso{
 \code{\link{mbWorkflow}}
 }
-\author{
-Erik Mueller
-}
+

@@ -37,3 +37,4 @@ w@settings <- updateSettings(w@settings)
 \author{
 Stravs MA, Eawag <michael.stravs@eawag.ch>
 }
+

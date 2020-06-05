@@ -51,9 +51,10 @@ This is a very crude rule, but works remarkably well for our spectra.
 }
 
 }
-\seealso{
-\code{\link{analyzeMsMs}}, \code{\link{filterLowaccResults}}
-}
 \author{
 Michael Stravs
 }
+\seealso{
+\code{\link{analyzeMsMs}}, \code{\link{filterLowaccResults}}
+}
+

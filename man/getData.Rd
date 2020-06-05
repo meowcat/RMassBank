@@ -22,3 +22,4 @@ compatibility since it returns more columns than MSnbase \code{as.data.frame}.
 \author{
 stravsmi
 }
+

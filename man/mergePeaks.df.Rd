@@ -9,3 +9,4 @@ mergePeaks.df(peaks, dppm, dabs, int)
 \description{
 Note: ppm and abs are not cumulative!
 }
+

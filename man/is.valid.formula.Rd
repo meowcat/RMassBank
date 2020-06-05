@@ -28,10 +28,11 @@ is.valid.formula("CH2Cl")
 is.valid.formula("C0H2")
 
 }
+\author{
+Michael Stravs
+}
 \seealso{
 \code{\link{list.to.formula}}, \code{\link{add.formula}},
 \code{\link{order.formula}}
 }
-\author{
-Michael Stravs
-}
+

@@ -5,39 +5,19 @@
 \alias{findMsMsHR.mass}
 \title{Extract MS/MS spectra for specified precursor}
 \usage{
-findMsMsHR(
-  fileName = NULL,
-  msRaw = NULL,
-  cpdID,
-  mode = "pH",
-  confirmMode = 0,
-  useRtLimit = TRUE,
+findMsMsHR(fileName = NULL, msRaw = NULL, cpdID, mode = "pH",
+  confirmMode = 0, useRtLimit = TRUE,
   ppmFine = getOption("RMassBank")$findMsMsRawSettings$ppmFine,
   mzCoarse = getOption("RMassBank")$findMsMsRawSettings$mzCoarse,
   fillPrecursorScan = getOption("RMassBank")$findMsMsRawSettings$fillPrecursorScan,
   rtMargin = getOption("RMassBank")$rtMargin,
-  deprofile = getOption("RMassBank")$deprofile,
-  headerCache = NULL,
-  peaksCache = NULL,
-  enforcePolarity = getOption("RMassBank")$enforcePolarity,
-  diaWindows = getOption("RMassBank")$findMsMsRawSettings$diaWindows
-)
+  deprofile = getOption("RMassBank")$deprofile, headerCache = NULL,
+  peaksCache = NULL, retrieval = "standard")
 
-findMsMsHR.mass(
-  msRaw,
-  mz,
-  limit.coarse,
-  limit.fine,
-  rtLimits = NA,
-  maxCount = NA,
-  headerCache = NULL,
-  fillPrecursorScan = FALSE,
-  deprofile = getOption("RMassBank")$deprofile,
-  peaksCache = NULL,
-  cpdID = NA,
-  polarity = NA,
-  diaWindows = getOption("RMassBank")$findMsMsRawSettings$diaWindows
-)
+findMsMsHR.mass(msRaw, mz, limit.coarse, limit.fine, rtLimits = NA,
+  maxCount = NA, headerCache = NULL, fillPrecursorScan = FALSE,
+  deprofile = getOption("RMassBank")$deprofile, peaksCache = NULL,
+  cpdID = NA)
 }
 \arguments{
 \item{fileName}{The file to open and search the MS2 spectrum in.}
@@ -80,8 +60,9 @@ freshly from \code{msRaw} for every compound.}
 \item{peaksCache}{If present, the complete output of \code{mzR::peaks(msRaw)}. This speeds up the lookup
 if multiple compounds should be searched in the same file.}
 
-\item{diaWindows}{A data frame with columns \code{precursorMz}, \code{mzMin}, \code{mzMax} which specifies the precursor and 
-window size of each window for DIA acquisition.}
+\item{retrieval}{A value that determines whether the files should be handled either as "standard",
+if the compoundlist is complete, "tentative", if at least a formula is present or "unknown"
+if the only know thing is the m/z}
 
 \item{mz}{The mass to use for spectrum search.}
 
@@ -123,7 +104,6 @@ Different versions of the function get the data from different sources. Note tha
 \itemize{
 \item \code{findMsMsHR.mass}: A submethod of find MsMsHR that retrieves basic spectrum data
 }}
-
 \note{
 \code{findMsMs.direct} is deactivated
 }
@@ -141,9 +121,10 @@ Different versions of the function get the data from different sources. Note tha
 			msms_atrazine <- msms_atrazine_all[[1]]
 }
 }
-\seealso{
-findEIC
-}
 \author{
 Michael A. Stravs, Eawag <michael.stravs@eawag.ch>
 }
+\seealso{
+findEIC
+}
+

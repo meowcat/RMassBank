@@ -36,16 +36,17 @@ into the peak tables.
 \examples{
 
 ## As used in the workflow:
-\dontrun{%
+\dontrun{\%
 	w@spectra <- lapply(w@spectra, function(spec)
 		analyzeMsMs(spec, mode="pH", detail=TRUE, run="recalibrated", cut=0, cut_ratio=0 ) )
 	w@aggregate <- aggregateSpectra(w@spectra)
 }
 
 }
-\seealso{
-\code{\link{msmsWorkflow}}, \code{\link{analyzeMsMs}}
-}
 \author{
 Michael Stravs
 }
+\seealso{
+\code{\link{msmsWorkflow}}, \code{\link{analyzeMsMs}}
+}
+

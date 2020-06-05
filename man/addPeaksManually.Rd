@@ -28,9 +28,10 @@ Adds a manual peaklist in matrix-format
 		addPeaksManually(w, cpdID, handSpec)
 }
 }
-\seealso{
-\code{\link{msmsWorkflow}}
-}
 \author{
 Erik Mueller
 }
+\seealso{
+\code{\link{msmsWorkflow}}
+}
+

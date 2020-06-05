@@ -25,3 +25,4 @@ title versus type. The validation report is saved as
 validate("/tmp/MassBank/OpenData/record/")
 }
 }
+

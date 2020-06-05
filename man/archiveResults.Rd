@@ -25,3 +25,4 @@ Writes the results from different \code{msmsWorkflow} steps to a file.
 		archiveResults(w, "narcotics.RData")
 
 }
+

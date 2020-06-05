@@ -35,12 +35,13 @@ createMolfile("C1=CC=CC=C1")
 }
 
 }
+\author{
+Michael Stravs
+}
 \references{
 OpenBabel: \url{http://openbabel.org}
 }
 \seealso{
 \code{\link{findSmiles}}
 }
-\author{
-Michael Stravs
-}
+

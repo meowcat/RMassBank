@@ -24,3 +24,4 @@ Sets all slots which are present as columns in the given dataframe. Optionally c
 \author{
 stravsmi
 }
+

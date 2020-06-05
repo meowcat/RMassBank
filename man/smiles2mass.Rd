@@ -23,3 +23,4 @@ Uses a SMILES-String to calculate the mass using rcdk-integrated functions.
 \author{
 Erik Mueller
 }
+

@@ -34,9 +34,10 @@ compound ID as parameter and looks it up.) Calculation relies on Rcdk.
 findMass("OC[C@H]1OC(O)[C@H](O)[C@@H](O)[C@@H]1O")
 
 }
-\seealso{
-\code{\link{findMz}}
-}
 \author{
 Michael Stravs
 }
+\seealso{
+\code{\link{findMz}}
+}
+

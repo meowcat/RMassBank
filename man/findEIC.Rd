@@ -4,18 +4,8 @@
 \alias{findEIC}
 \title{Extract EICs}
 \usage{
-findEIC(
-  msRaw,
-  mz,
-  limit = NULL,
-  rtLimit = NA,
-  headerCache = NULL,
-  floatingRecalibration = NULL,
-  peaksCache = NULL,
-  polarity = NA,
-  msLevel = 1,
-  precursor = NULL
-)
+findEIC(msRaw, mz, limit = NULL, rtLimit = NA, headerCache = NULL,
+  floatingRecalibration = NULL, peaksCache = NULL)
 }
 \arguments{
 \item{msRaw}{The mzR file handle}
@@ -46,9 +36,10 @@ A \code{[rt, intensity, scan]} matrix (\code{scan} being the scan number.)
 \description{
 Extract EICs from raw data for a determined mass window.
 }
-\seealso{
-findMsMsHR
-}
 \author{
 Michael A. Stravs, Eawag <michael.stravs@eawag.ch>
 }
+\seealso{
+findMsMsHR
+}
+

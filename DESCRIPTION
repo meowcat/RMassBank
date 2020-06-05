@@ -69,4 +69,4 @@ Collate:
     'fillback.R'
     'parseMbRecord.R'
     'zzz.R'
-RoxygenNote: 7.0.0
+RoxygenNote: 6.1.1

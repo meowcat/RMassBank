@@ -38,9 +38,10 @@ resetList() clears a currently loaded list.
 \dontrun{loadList("mylist.csv")}
 
 }
-\seealso{
-\code{\link{findMz}}
-}
 \author{
 Michael Stravs
 }
+\seealso{
+\code{\link{findMz}}
+}
+

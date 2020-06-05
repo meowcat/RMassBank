@@ -25,6 +25,9 @@ regarded as experimental and has not thoroughly been tested.}
 getPcId("MKXZASYAUGDDCJ-NJAFHUGGSA-N")
 
 }
+\author{
+Michael Stravs, Erik Mueller
+}
 \references{
 PubChem search: \url{http://pubchem.ncbi.nlm.nih.gov/} 
 
@@ -34,6 +37,4 @@ Pubchem REST:
 \seealso{
 \code{\link{getCtsRecord}}, \code{\link{getCactus}}
 }
-\author{
-Michael Stravs, Erik Mueller
-}
+

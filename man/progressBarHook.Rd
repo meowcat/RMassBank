@@ -4,7 +4,8 @@
 \alias{progressBarHook}
 \title{Standard progress bar hook.}
 \usage{
-progressBarHook(object = NULL, value = 0, min = 0, max = 100, close = FALSE)
+progressBarHook(object = NULL, value = 0, min = 0, max = 100,
+  close = FALSE)
 }
 \arguments{
 \item{object}{An identifier representing an instance of a progress bar.}
@@ -45,3 +46,4 @@ same way.
 \author{
 Michele Stravs, Eawag <stravsmi@eawag.ch>
 }
+

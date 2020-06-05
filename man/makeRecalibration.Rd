@@ -2,8 +2,8 @@
 % Please edit documentation in R/leMsMs.r
 \name{makeRecalibration}
 \alias{makeRecalibration}
-\alias{recalibrateSpectra}
 \alias{recalibrateSingleSpec}
+\alias{recalibrateSpectra}
 \title{Recalibrate MS/MS spectra}
 \usage{
 makeRecalibration(w, mode, 
@@ -91,3 +91,4 @@ This also ensures a consistent recalibration across all spectra of the same batc
 \author{
 Michael Stravs, Eawag <michael.stravs@eawag.ch>
 }
+
