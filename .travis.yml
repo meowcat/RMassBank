@@ -21,6 +21,7 @@ addons:
       - r-cran-rjava
 
 r_packages:
+  - rJava
   - covr
 
 script: 
