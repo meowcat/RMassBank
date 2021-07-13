@@ -8,6 +8,7 @@
   RMassBank.env$testnumber <- 1
   ## new variables
   RMassBank.env$verbose.output <- FALSE
+  RMassBank.env$logging.file <- NULL
   RMassBank.env$export.invalid <- FALSE
   RMassBank.env$export.molfiles <- TRUE
   RMassBank.env$strictMsMsSpectraSelection <- FALSE

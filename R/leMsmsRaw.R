@@ -233,7 +233,7 @@ findMsMsHR.mass <- function(msRaw, mz, limit.coarse, limit.fine, rtLimits = NA, 
 	# scan filter (coarse limit) range; which to get rid of NAs
 	if(!is.null(diaWindows))
 	{
-	  message("using diaWindows")
+	  log_info("using diaWindows")
 	  window <- which((diaWindows$mzMin < mz) & (diaWindows$mzMax >= mz))
 	  if(length(window) > 1)
 	  {

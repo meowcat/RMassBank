@@ -219,6 +219,7 @@ should then be edited. Important settings are:
     necessary precursor information was available in the mzML file. A setting of 
     TRUE tries to fill in the precursor data scan number if it is missing.  
     Only tested on one case-study so far.
+*  `logging_file`: Set a file logs should be written to. By default, `logging_file` is not specified and all logging information is written to STDOUT. Note: This setting will cause a static package variable to contain the logging file. This variable is checked by the logging functions, rather than the setting. Hence, changing the setting manually afterwards will not change the logging file.
 
 See also the manpage `?RmbSettings` for a description of all RMassBank
 settings.

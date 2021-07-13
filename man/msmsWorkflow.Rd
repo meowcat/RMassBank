@@ -13,6 +13,7 @@ msmsWorkflow(
   useRtLimit = TRUE,
   archivename = NA,
   readMethod = "mzR",
+  filetable = NULL,
   findPeaksArgs = NULL,
   plots = FALSE,
   precursorscan.cf = FALSE,

@@ -372,6 +372,9 @@ loadRmbSettings <- function(file_or_list)
 			if(is.null(o$annotations[[name]]))
 				o$annotations[[name]] <- ""
 		}
+		if (!is.null(o$logging_file)) {
+			RMassBank.env$logging_file <- o$logging_file
+		}
 		options(RMassBank = o)
 	}
 	else if (isR)

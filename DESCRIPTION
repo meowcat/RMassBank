@@ -33,7 +33,7 @@ Encoding: UTF-8
 Imports:
     XML,rjson,S4Vectors,digest,
     rcdk,yaml,mzR,methods,Biobase,MSnbase,httr,
-    enviPat,assertthat
+    enviPat,assertthat,logger
 Suggests:
     BiocStyle,gplots,RMassBankData,
     xcms (>= 1.37.1),
@@ -71,4 +71,5 @@ Collate:
     'fillback.R'
     'parseMbRecord.R'
     'zzz.R'
+    'log_wrapper.R'
 RoxygenNote: 7.1.1

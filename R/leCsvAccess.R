@@ -222,7 +222,7 @@ loadList <- function(path, listEnv = NULL, check = TRUE)
         Level <- rep("0",nrow(compoundList))
         .listEnvEnv$listEnv$compoundList <- cbind(compoundList,Level)
     }
-    message("Loaded compoundlist successfully")
+    log_info("Loaded compoundlist successfully")
 }
 
 #' @export

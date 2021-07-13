@@ -42,7 +42,7 @@ writeMgfSpectraSet <- function(object,
 					verbose = FALSE, exactPrecursor = FALSE)
 {
 	if (class(con) == "character" && file.exists(con)) {
-		message("Overwriting ", con, "!")
+		log_info("Overwriting ", con, "!")
 		unlink(con)
 	}
 	
@@ -68,7 +68,7 @@ writeMgfRmbSpectrum2List <- function(object,
 		verbose = FALSE)
 {
 	if (class(con) == "character" && file.exists(con)) {
-		message("Overwriting ", con, "!")
+		log_info("Overwriting ", con, "!")
 		unlink(con)
 	}
 	

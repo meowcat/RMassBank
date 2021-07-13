@@ -37,7 +37,7 @@ newStep2WorkFlow <- function(w, mode="pH",
   ##Progress bar
   nLen <- length(w@files)
   nProg <- 0
-  message("msmsWorkflow: Step 2. First analysis pre recalibration")
+  log_info("msmsWorkflow: Step 2. First analysis pre recalibration")
   pb <- do.call(progressbar, list(object=NULL, value=0, min=0, max=nLen))
   
   ##Index the fragment data (for time reasons, "which" is very slow for large matrices)

@@ -205,7 +205,7 @@ mbWorkflow <- function(mb, steps=c(1,2,3,4,5,6,7,8), infolist_path="./infolist.c
     if(1 %in% steps)
     {
         mbdata_ids <- lapply(selectSpectra(mb@spectra, "found", "object"), function(spec) spec@id)
-                message("mbWorkflow: Step 1. Gather info from several databases")
+                log_info("mbWorkflow: Step 1. Gather info from several databases")
       # Which IDs are not in mbdata_archive yet?
       new_ids <- setdiff(as.numeric(unlist(mbdata_ids)), mb@mbdata_archive$id)
       mb@mbdata <- lapply(new_ids, function(id) 
@@ -223,7 +223,7 @@ mbWorkflow <- function(mb, steps=c(1,2,3,4,5,6,7,8), infolist_path="./infolist.c
                 # message("mbWorkflow: Step 1. Gather no info - Unknown structure")
                 d <- gatherDataUnknown(id, mb@spectra[[1]]@mode, retrieval=findLevel(id,TRUE))
         }
-		message(paste(id, ": ", d$dataused, sep=''))
+		log_info(paste(id, ": ", d$dataused, sep=''))
         return(d)
       })
   }
@@ -231,21 +231,21 @@ mbWorkflow <- function(mb, steps=c(1,2,3,4,5,6,7,8), infolist_path="./infolist.c
   # Otherwise, continue!
   if(2 %in% steps)
   {
-	message("mbWorkflow: Step 2. Export infolist (if required)")
+	log_info("mbWorkflow: Step 2. Export infolist (if required)")
     if(length(mb@mbdata)>0)
     {
       mbdata_mat <- flatten(mb@mbdata)
       write.csv(as.data.frame(mbdata_mat),infolist_path, na="")
-            message(paste("The file", infolist_path, "was generated with new compound information. Please check and edit the table, and add it to your infolist folder."))
+            log_info(paste("The file", infolist_path, "was generated with new compound information. Please check and edit the table, and add it to your infolist folder."))
       return(mb)
     }
     else
-      message("No new data added.")
+      log_info("No new data added.")
   }
   # Step 3: Take the archive data (in table format) and reformat it to MassBank tree format.
   if(3 %in% steps)
   {
-	message("mbWorkflow: Step 3. Data reformatting")
+	log_info("mbWorkflow: Step 3. Data reformatting")
     mb@mbdata_relisted <- apply(mb@mbdata_archive, 1, readMbdata)
   }
   # Step 4: Compile the spectra! Using the skeletons from the archive data, create
@@ -253,11 +253,11 @@ mbWorkflow <- function(mb, steps=c(1,2,3,4,5,6,7,8), infolist_path="./infolist.c
   # Also, assign accession numbers based on scan mode and relative scan no.
   if(4 %in% steps)
   {
-	  message("mbWorkflow: Step 4. Spectra compilation")
+	  log_info("mbWorkflow: Step 4. Spectra compilation")
 	  mb@compiled <- lapply(
 			  selectSpectra(mb@spectra, "found", "object"),
 			  function(r) {
-				  message(paste("Compiling: ", r@name, sep=""))
+				  log_info(paste("Compiling: ", r@name, sep=""))
 				  mbdata <- mb@mbdata_relisted[[which(mb@mbdata_archive$id == as.numeric(r@id))]]
 				  if(filter)
             res <- buildRecord(r, mbdata=mbdata, additionalPeaks=mb@additionalPeaks, filter = filterOK & best)
@@ -276,7 +276,7 @@ mbWorkflow <- function(mb, steps=c(1,2,3,4,5,6,7,8), infolist_path="./infolist.c
   # flat-text string arrays (basically, into text-file style, but still in memory)
   if(5 %in% steps)
   {
-	message("mbWorkflow: [Legacy Step 5. Flattening records] ignored")
+	log_info("mbWorkflow: [Legacy Step 5. Flattening records] ignored")
     #mb@mbfiles <- lapply(mb@compiled_ok, function(cpd) toMassbank(cpd, mb@additionalPeaks))
     #mb@mbfiles_notOk <- lapply(mb@compiled_notOk, function(c) lapply(c, toMassbank))
   }
@@ -286,7 +286,7 @@ mbWorkflow <- function(mb, steps=c(1,2,3,4,5,6,7,8), infolist_path="./infolist.c
   if(6 %in% steps)
   {
     if(RMassBank.env$export.molfiles){
-      message("mbWorkflow: Step 6. Generate molfiles")
+      log_info("mbWorkflow: Step 6. Generate molfiles")
       mb@molfile <- lapply(mb@compiled_ok, function(c) createMolfile(as.numeric(c@id)))
     } else
       warning("RMassBank is configured not to export molfiles (RMassBank.env$export.molfiles). Step 6 is therefore ignored.")
@@ -295,7 +295,7 @@ mbWorkflow <- function(mb, steps=c(1,2,3,4,5,6,7,8), infolist_path="./infolist.c
   # the files to disk.
   if(7 %in% steps)
   {
-	message("mbWorkflow: Step 7. Generate subdirs and export")
+	log_info("mbWorkflow: Step 7. Generate subdirs and export")
         
         ## create folder
         filePath_recData_valid   <- file.path(getOption("RMassBank")$annotations$entry_prefix, "recdata")
@@ -337,7 +337,7 @@ mbWorkflow <- function(mb, steps=c(1,2,3,4,5,6,7,8), infolist_path="./infolist.c
   if(8 %in% steps)
   {
         if(RMassBank.env$export.molfiles){
-          message("mbWorkflow: Step 8. Create list.tsv")
+          log_info("mbWorkflow: Step 8. Create list.tsv")
           makeMollist(compiled = mb@compiled_ok)
         } else
             warning("RMassBank is configured not to export molfiles (RMassBank.env$export.molfiles). Step 8 is therefore ignored.")
